@@ -6,8 +6,8 @@ namespace BancoSimu.Contas
 {
     public abstract class Conta
     {
-        public int Agencia { get; protected set; }
-        public int Numero { get; protected set; }
+        public int Agencia { get;}
+        public int Numero { get;}
         public double Saldo { get; protected set; }
 
         protected Conta(int agencia, int numero)
@@ -16,7 +16,7 @@ namespace BancoSimu.Contas
             Numero = numero;
         }
 
-        public abstract bool Sacar(double valor);
-        public abstract bool Depositar(double valor);
+        public abstract void Sacar(double valor);
+        public abstract void Depositar(double valor);
     }
 }

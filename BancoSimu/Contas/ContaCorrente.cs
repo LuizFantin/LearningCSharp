@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoSimu.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,19 +16,19 @@ namespace BancoSimu.Contas
             TaxaOperacao = 10 / TotalContaCorrenteCriada;
         }
 
-        public override bool Depositar(double valor)
+        public override void Depositar(double valor)
         {
             Saldo += valor;
-            return true;
         }
-        public override bool Sacar(double valor)
+        public override void Sacar(double valor)
         {
-            if (Saldo - TaxaOperacao - valor >= 0)
-            {
-                Saldo -= (valor + TaxaOperacao);
-                return true;
-            }
-            return false;
+            if (valor <= 0)
+                throw new ArgumentException("O valor do saque deve ser maior que zero", nameof(valor));
+
+            if (Saldo - TaxaOperacao - valor < 0)
+                throw new SaldoInsuficienteException(Saldo, valor);
+
+            Saldo -= (valor + TaxaOperacao);
         }
     }
 }

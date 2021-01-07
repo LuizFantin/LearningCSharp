@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fanti\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj": {}
+    "C:\\Users\\luiz.fantin\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fanti\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj": {
+    "C:\\Users\\luiz.fantin\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fanti\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj",
+        "projectUniqueName": "C:\\Users\\luiz.fantin\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj",
         "projectName": "BancoSimu",
-        "projectPath": "C:\\Users\\fanti\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj",
-        "packagesPath": "C:\\Users\\fanti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fanti\\github-projetos\\LearningCSharp\\BancoSimu\\obj\\",
+        "projectPath": "C:\\Users\\luiz.fantin\\github-projetos\\LearningCSharp\\BancoSimu\\BancoSimu.csproj",
+        "packagesPath": "C:\\Users\\luiz.fantin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luiz.fantin\\github-projetos\\LearningCSharp\\BancoSimu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fanti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luiz.fantin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Humanizer": {
+              "target": "Package",
+              "version": "[2.8.26, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

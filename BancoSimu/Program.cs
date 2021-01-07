@@ -9,8 +9,9 @@ namespace BancoSimu
     {
         static void Main(string[] args)
         {
-            
-
+            DateTime data = new DateTime(2021,01,07,10,20,30);
+            TimeSpan time = TimeSpan.FromMinutes(120);
+            Console.WriteLine(Humanizer.TimeSpanHumanizeExtensions.Humanize(time));
             Console.ReadLine();
         }
 

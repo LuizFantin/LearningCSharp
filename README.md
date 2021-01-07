@@ -8,3 +8,5 @@
 - Polymorphism
 - Inheritance
 - Encapsulation
+- NuGet
+- DateTime, TimeSpan and Humanizer

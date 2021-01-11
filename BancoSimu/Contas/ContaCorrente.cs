@@ -30,5 +30,10 @@ namespace BancoSimu.Contas
 
             Saldo -= (valor + TaxaOperacao);
         }
+
+        public override string ToString()
+        {
+            return $"Número: {Numero}, Agência: {Agencia}";
+        }
     }
 }

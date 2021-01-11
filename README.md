@@ -10,3 +10,6 @@
 - Encapsulation
 - NuGet
 - DateTime, TimeSpan and Humanizer
+- String Manipulations
+- Regex (Regular Expression)
+

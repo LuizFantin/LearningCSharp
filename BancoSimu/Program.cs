@@ -2,6 +2,7 @@
 using BancoSimu.Funcionarios;
 using BancoSimu.Sistemas;
 using System;
+using System.Text.RegularExpressions;
 
 namespace BancoSimu
 {
@@ -9,10 +10,37 @@ namespace BancoSimu
     {
         static void Main(string[] args)
         {
-            DateTime data = new DateTime(2021,01,07,10,20,30);
+            ContaCorrente conta = new ContaCorrente(23, 41);
+            Console.WriteLine(conta.ToString());
+            
+            Console.ReadLine();
+        }
+
+        public static void TesteExpressaoRegular()
+        {
+            string padrao = "[0-9]{4,5}-?[0-9]{4}";
+            string frase = "meu telefone é 99999-0000";
+            Console.WriteLine(Regex.IsMatch(frase, padrao));
+            Match resultado = Regex.Match(frase, padrao);
+            Console.WriteLine(resultado.Value);
+        }
+
+        public static void TesteString()
+        {
+            string url = "pagina?moeda1=real&moeda2=dolar";
+            ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(url);
+
+
+            Console.WriteLine(extrator.Argumentos);
+            Console.WriteLine(extrator.GetValor("moeda1"));
+            Console.WriteLine(extrator.GetValor("moeda2"));
+        }
+
+        public static void TesteDatas()
+        {
+            DateTime data = new DateTime(2021, 01, 07, 10, 20, 30);
             TimeSpan time = TimeSpan.FromMinutes(120);
             Console.WriteLine(Humanizer.TimeSpanHumanizeExtensions.Humanize(time));
-            Console.ReadLine();
         }
 
         public static void UsarSistema()

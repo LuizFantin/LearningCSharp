@@ -10,10 +10,25 @@ namespace BancoSimu
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(23, 41);
-            Console.WriteLine(conta.ToString());
             
             Console.ReadLine();
+        }
+
+        public static int SomarVarios(params int[] numeros)
+        {
+            int resultado = 0;
+            foreach (int numero in numeros)
+                resultado += numero;
+            return resultado;
+        }
+
+        public static void TesteArrays()
+        {
+            ContaCorrente[] contas = new ContaCorrente[] 
+            { 
+                new ContaCorrente(123,321),
+                new ContaCorrente(321,123),
+            };
         }
 
         public static void TesteExpressaoRegular()
